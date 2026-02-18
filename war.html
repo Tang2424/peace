@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>战争的影响 | 呼吁和平</title>
+    <style>
+        body { font-family: 'PingFang SC', sans-serif; margin: 0; background: #1a1a1a; color: #eee; }
+        .container { padding: 50px 10%; text-align: center; }
+        .back-home { color: #3498db; text-decoration: none; font-size: 1.1rem; display: block; margin-bottom: 30px; }
+        h1 { font-size: 2.5rem; color: #e74c3c; }
+        
+        /* 图片展示区 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: grayscale(100%); /* 黑白处理，增加沉重感 */
+            transition: 0.5s;
+        }
+        .gallery img:hover { filter: grayscale(0%); transform: scale(1.03); }
+        
+        p { max-width: 800px; margin: 20px auto; line-height: 1.8; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-home">← 返回主页</a>
+        <h1>战争的沉重代价</h1>
+        <p>这些影像记录了冲突带来的满目疮痍。我们展示这些，是为了铭记和平的珍贵。</p>
+        
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1533619239233-628103c235bc?auto=format&fit=crop&w=600&q=80" alt="废墟">
+            <img src="https://images.unsplash.com/photo-1444212477490-ca40a945344e?auto=format&fit=crop&w=600&q=80" alt="离散">
+            <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?auto=format&fit=crop&w=600&q=80" alt="反思">
+            <img src="https://images.unsplash.com/photo-1505672678657-cc7037095e60?auto=format&fit=crop&w=600&q=80" alt="祈祷">
+        </div>
+    </div>
+</body>
+</html>
