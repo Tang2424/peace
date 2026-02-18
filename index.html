@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愿世界和平 | Vision for Peace</title>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/dove.png">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+        nav a { text-decoration: none; color: #555; margin-left: 25px; transition: 0.3s; font-weight: 500; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* 英雄横幅区 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1528072123453-8a3ee541df3c?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; min-height: 1.2em; }
+        .hero p { font-size: 1.25rem; max-width: 700px; opacity: 0.9; }
+
+        /* 通用板块样式 */
+        .section { padding: 100px 15%; text-align: center; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 3rem; position: relative; }
+        .section h2::after {
+            content: ""; display: block; width: 50px; height: 3px; 
+            background: var(--accent-color); margin: 15px auto;
+        }
+
+        /* 卡片布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            padding: 40px;
+            border-radius: 20px;
+            background: #fdfdfd;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--accent-color); }
+        .card .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+
+        /* 呼吁区 */
+        .cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 20px;
+            border-radius: 0;
+        }
+
+        .btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover { background: #2980b9; box-shadow: 0 5px 15px rgba(52,152,219,0.4); }
+
+        footer { background: #1a1a1a; color: #888; padding: 50px 20px; text-align: center; }
+        footer p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🕊️ PeaceOne</div>
+        <div>
+            <a href="#about">我们的愿景</a>
+            <a href="#join">加入行动</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 id="typewriter"></h1>
+        <p>和平不是远方的目标，而是我们抵达目标的路径。每一个人的一小步，都是人类文明的一大步。</p>
+    </header>
+
+    <section class="section" id="about">
+        <h2>守护共同的家园</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="icon">🌿</span>
+                <h3>停止冲突</h3>
+                <p>对话永远优于对抗，让橄榄枝取代坚硬的盔甲。</p>
+            </div>
+            <div class="card">
+                <span class="icon">🧒</span>
+                <h3>保护未来</h3>
+                <p>让全世界的孩子都能在蓝天下自由奔跑，不再受战争惊扰。</p>
+            </div>
+            <div class="card">
+                <span class="icon">🌏</span>
+                <h3>全球协作</h3>
+                <p>面对气候与贫困，我们需要一个联合且和平的地球。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" id="join">
+        <h2>为和平发声</h2>
+        <p style="margin-bottom: 30px; font-size: 1.1rem;">虽然我们相隔万里，但对和平的渴望让我们紧紧相连。</p>
+        <button class="btn" onclick="celebrate()">支持和平愿景</button>
+    </section>
+
+    <footer>
+        <p>© 2026 愿世界和平 | 公益展示项目</p>
+        <p>让爱跨越国界，让和平永驻人间</p>
+    </footer>
+
+    <script>
+        // 打字机特效代码
+        const text = "放下偏见，拥抱和平";
+        let index = 0;
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+
+        // 庆祝特效
+        function celebrate() {
+            alert("感谢您的支持！让和平的声音传得更远。");
+        }
+
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
